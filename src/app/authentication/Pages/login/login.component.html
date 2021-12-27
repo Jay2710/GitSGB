@@ -1,0 +1,44 @@
+<div class="container">
+    <p-toast position="top-right"></p-toast>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <i class="pi pi-lock" style="color: #fff;"></i>
+                    <h1>Find Your Account</h1>
+                    <h6>Please enter email & Password !!</h6>
+                </div>
+
+                <form [formGroup]="LoginForm" (ngSubmit)="onSubmit()">
+                    <div class="mb-3">
+                        <label class="form-label">Email address</label>
+                        <input type="email" class="form-control" placeholder="Enter Your Email Address"
+                            formControlName="emailId">
+                        <div
+                            *ngIf="(LoginForm.get('emailId')?.touched || isSubmitted) && LoginForm.get('emailId')?.invalid">
+                            <span id="emailHelp" class="form-text"
+                                *ngIf="LoginForm.get('emailId')?.hasError('required')">*Email is Required
+                                field</span>
+                            <span id="emailHelp" class="form-text"
+                                *ngIf="LoginForm.get('emailId')?.hasError('pattern')">*Email is not Correct</span>
+                        </div>
+
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control" pPassword placeholder="Enter Your Password"
+                            formControlName="password" />
+                        <span class="form-text"
+                            *ngIf="(LoginForm.get('password')?.touched || isSubmitted) && LoginForm.get('password')?.invalid">
+                            *Password is Required field</span>
+                    </div>
+                    <button pButton pRipple type="submit" label="Login" icon="pi pi-send" class="p-button-raised"
+                        iconPos="right"></button>
+
+                </form>
+                <a style="color:#fff ; margin-left: 250px ;margin-bottom:-10px" routerLink='/forgot-password'>Forget
+                    Password??</a>
+            </div>
+        </div>
+    </div>
+</div>

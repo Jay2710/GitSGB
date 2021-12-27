@@ -1,0 +1,131 @@
+<div>
+    <div class="table_container">
+        <div class="remain">
+            <div>
+                <span>
+                    <h5>No. of Total Leaves : <span>{{totalL}}</span></h5>
+                </span>
+                <span>
+                    <h5>No. of Leaves Taken : <span>{{takenL}}</span></h5>
+                </span>
+                <span>
+                    <h5>No. of Pending Leave Request : <span>{{pendingLR}}</span></h5>
+                </span>
+            </div>
+        </div>
+        <h1 class="heading">Yearly Taken Leaves</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>sr no.</th>
+                    <th>Date</th>
+                    <th>Days</th>
+                    <th>Leave reason</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="sr no.">1</td>
+                    <td data-label="Date">02/01/2022</td>
+                    <td data-label="Days">2</td>
+                    <td data-label="Holiday">Home sick</td>
+                </tr>
+                <tr>
+                    <td data-label="sr no.">2</td>
+                    <td data-label="Date">22/01/2022</td>
+                    <td data-label="Days">1</td>
+                    <td data-label="Holiday">Sick </td>
+                </tr>
+                <tr>
+                    <td data-label="sr no.">3</td>
+                    <td data-label="Date">06/03/2022</td>
+                    <td data-label="Days">1</td>
+                    <td data-label="Holiday">Wedding</td>
+                </tr>
+                <tr>
+                    <td data-label="sr no.">4</td>
+                    <td data-label="Date">15/03/2022</td>
+                    <td data-label="Days">1</td>
+                    <td data-label="Holiday">Sick</td>
+                </tr>
+                <tr>
+                    <td data-label="sr no.">5</td>
+                    <td data-label="Date">19/04/2022</td>
+                    <td data-label="Days">1</td>
+                    <td data-label="Holiday">Lazy day</td>
+                </tr>
+                <tr>
+                    <td data-label="sr no.">6</td>
+                    <td data-label="Date">02/01/2022</td>
+                    <td data-label="Days">2</td>
+                    <td data-label="Holiday">Home sick</td>
+                </tr>
+                <tr>
+                    <td data-label="sr no.">7</td>
+                    <td data-label="Date">22/01/2022</td>
+                    <td data-label="Days">1</td>
+                    <td data-label="Holiday">Sick</td>
+                </tr>
+                <tr>
+                    <td data-label="sr no.">8</td>
+                    <td data-label="Date">06/03/2022</td>
+                    <td data-label="Days">1</td>
+                    <td data-label="Holiday">Wedding</td>
+                </tr>
+                <tr>
+                    <td data-label="sr no.">9</td>
+                    <td data-label="Date">15/03/2022</td>
+                    <td data-label="Days">1</td>
+                    <td data-label="Holiday">Sick</td>
+                </tr>
+                <tr>
+                    <td data-label="sr no.">10</td>
+                    <td data-label="Date">19/04/2022</td>
+                    <td data-label="Days">1</td>
+                    <td data-label="Holiday">Lazy day</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">LEAVE DATE</th>
+                    <th scope="col">LEAVE TYPE</th>
+                    <th scope="col">STATUS</th>
+                    <th scope="col">REQUESTED BY</th>
+                    <th scope="col">ACTION TAKEN ON</th>
+                    <th scope="col">LEAVE REASON</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>{{today| date}}<br><span><i> 1 day </i></span></td>
+                    <td>Casual/Sick Leave<br><span><i> Requested on {{today| date}}</i></span></td>
+                    <td>Approved<br><span><i>by Hardik sir </i></span></td>
+                    <td>Jay Jawarkar</td>
+                    <td>{{12/12/2021| date}}</td>
+                    <td>Marriage</td>
+                </tr>
+                <!-- <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr> -->
+            </tbody>
+        </table>
+
+    </div>
+    <div class="d-grid gap-2">
+        <a routerLink='/dashboard/addleave' class="btn btn-primary" type="button">Add Leave Request</a>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+/* @import '../home/home.component.css'; */
+
+.table_container{
+    border-collapse:collapse;
+    position:flex;
+    width: 70%;
+    padding:50px;
+    background-color:white;
+    margin-left:-40px;
+    transition:0.5s;
+    transition-property: left;
+}
+
+.heading{
+    background:white;
+    color:black;
+    margin-left:350px;
+}
+
+.remain{
+    width:700px;
+    position: flex;
+    padding-top:200px;
+    margin-left:900px;
+    color:black;
+    background-color:white;
+}
+
+.table{
+    border-collapse: collapse;
+    border-spacing: 100px;
+    position:flex;
+    width:100%;
+}
+
+.table{
+    width: 50%;
+    margin-left:280px;
+    margin-bottom:100px;
+}

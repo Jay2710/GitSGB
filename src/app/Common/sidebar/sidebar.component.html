@@ -1,0 +1,44 @@
+<body>
+    <input type="checkbox" id="check">
+    <header>
+        <!-- <label for="check">
+        <i class="fab fa-battle-net" id="sidebar_btn"></i>
+    </label> -->
+        <div class="left_area">
+            <label class="leave">
+                <h2> Leave Management</h2>
+            </label>
+        </div>
+        <div class="right_area">
+            <a class="logout_btn" (click)="authenticationservice.logoutUser()"><span>Logout</span></a>
+            <div class="profile_name">
+                <h6>Admin </h6>
+            </div>
+            <div class="profile_pic">
+                <!-- <img src="1.png" alt=""> -->
+            </div>
+        </div>
+        <!-- <div class ="profile_name">
+    <h6>Jay Jawarkar</h6>
+</div>
+<div class = "profile_pic" >
+    <img src="1.png" alt= "">
+</div> -->
+    </header>
+    <!-- Header area Ends  -->
+
+
+
+
+
+    <!--SideBar Starts from Here-->
+
+    <div class="sidebar">
+        <label for="check"><i class="pi pi-bars" id="sidebar_btn"></i><span>Menu</span></label>
+        <a routerLink="/dashboard/home"><i class="pi pi-home"></i><span>Home</span></a>
+        <a routerLink="dashboard"><i class="pi pi-home"></i><span>Dashboard</span></a>
+        <!-- <a routerLink ="#"><i class="fab fa-dashcube"></i><span>A</span></a>
+    <a routerLink ="#"><i class="fab fa-dashcube"></i><span>B</span></a>
+    <a routerLink ="#"><i class="fab fa-dashcube"></i><span>C</span></a> -->
+    </div>
+</body>
