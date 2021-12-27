@@ -1,3 +1,25 @@
+.sidebar-show{
+    display:50%;
+    background:black;
+}
+
+
+
+
+
+
+
+
+/* .btn:hover{
+    border: purple;
+    background:linear-gradient(90deg, hsla(205,46%,30%,1)0%,hsla(260,29%,36%,1)100%);
+}
+
+.btn{
+    transition:0.5s;
+    transform: background;
+} 
+
 body{
     margin:0;
     padding:0;
@@ -36,7 +58,7 @@ header{
 }
 
 .profile_name{
-    /* background:azure; */
+
     color:azure;
     float:right;
     margin-top:10px;
@@ -117,7 +139,7 @@ header{
 
 label #sidebar_btn:hover{
     color:hsla(260,29%,36%,1);
-    /* background:linear-gradient(90deg, hsla(205,46%,30%,1)0%,hsla(260,29%,36%,1)100%); */
+    
 }
 
 #check:checked~.sidebar{
@@ -142,12 +164,9 @@ label #sidebar_btn:hover{
     font-size:20px;
     margin-left: 160px;
     width:90px;
-}
-
-/* #check:checked ~.left_area{
-    width:calc(100% -80%);
-    left: 300px;
 } */
+
+
 
 #check:checked ~.leave h2{
     width:calc(100% -80%);

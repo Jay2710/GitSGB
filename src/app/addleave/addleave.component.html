@@ -1,54 +1,87 @@
-<form [formGroup]="LeaveForm" (ngSubmit)="onSubmit()">
-    <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Employee Id</label>
-        <input type="number" class="form-control" placeholder="Enter Your Employee Id" formControlName="empId">
-    </div>
-    <div>
-        <label>Leave Type :</label>
-        <select formControlName="leaveT" [value]="type" (input)="onChange($any($event.target).value)">
-            <option *ngFor="let l of leaveType" [value]="(l.id)">{{l.name}}</option>
-        </select>
-        <div>
+<div class="animated fadeIn">
+    <div class="row">
+        <div class="col-sm-6 col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    Add Leave Form
+                </div>
+                <div class="card-body">
+                    <form [formGroup]="LeaveForm" (ngSubmit)="onSubmit()">
+                        <!-- <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Employee Id</label>
+                <input type="number" class="form-control" placeholder="Enter Your Employee Id" formControlName="empId">
+            </div> -->
+                        <div>
+                            <label>Leave Type :</label>
+                            <p-dropdown [options]="leaveT" placeholder="Select a Leave Type" optionLabel="name"
+                                formControlName="leaveType" optionValue="id" (onChange)="onChange($any($event).value)">
+                                <div
+                                    *ngIf="(LeaveForm.get('leaveType')?.touched || isSubmitted) && LeaveForm.get('leaveType')?.invalid">
+                                    *Leave Type Is Required</div>
+                            </p-dropdown>
+
+                            <div>
 
 
-            <div class="mb-3" *ngIf="(type == 1)">Date :
+                                <div class="mb-3" *ngIf="(type == 1)">Date :
 
+                                    <div class="p-field p-col-12 p-md-4">
+                                        <p-calendar formControlName="date" placeholder="Pick a Date" [minDate]="minDate"
+                                            dateFormat="dd-mm-yy" [showIcon]="true">
+                                        </p-calendar>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="mb-3" *ngIf="(type == 2)">Date :
+
+                                    <div class="p-field p-col-12 p-md-4">
+                                        <p-calendar formControlName="date" placeholder="Pick a Range Date"
+                                            [minDate]="minDate" dateFormat="dd-mm-yy" selectionMode="range"
+                                            [readonlyInput]="true" inputId="range" [showIcon]="true">
+                                        </p-calendar>
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                            <div class="p-field-radiobutton">
+                                <label>Half Day :</label>
+                                <p-inputSwitch formControlName="halfDay"></p-inputSwitch>
+
+
+                            </div>
+                            <div>
+                                <label>Reason :</label>
+                                <span class="p-float-label">
+                                    <textarea id="float-input" rows="5" cols="30" pInputTextarea
+                                        formControlName="reason"></textarea>
+                                    <label for="float-input">Summary</label>
+                                </span>
+                            </div>
+
+                            <div><label>Approving Person: </label>
+                                <p-dropdown [options]="apperson" optionLabel="name" placeholder="Approving Person "
+                                    formControlName="approvP"></p-dropdown>
+                                <!-- <select formControlName="approvP">
+                        <option [value]="">Select</option>
+                        <option *ngFor="let a of apperson">{{a.name}}</option>
+                    </select> -->
+                            </div>
+
+                            <div><label> Notify other Persons: </label>
+                                <p-multiSelect [options]="notperson" placeholder="Notify Others"
+                                    formControlName="notifyMe" optionLabel="name"></p-multiSelect>
+                            </div>
+                            <button pButton pRipple type="submit" label="Add Leave Request" icon="pi pi-check"
+                                class="p-button-sm" iconPos="right"></button>
+                            <!-- <p-button pRipple type="submit" label="Add Leave request" icon="pi pi-check"></p-button> -->
+
+                        </div>
+                    </form>
+                </div>
             </div>
-
-
-            <div class="mb-3" *ngIf="(type == 2)">Date :
-
-            </div>
-
-
-            <div class="mb-3" *ngIf="(type == 3)">Date :
-
-            </div>
-
-
-
-
         </div>
-        <div>
-            <label>Reason: </label>
-            <input type="text" class="text" formControlName="reason" placeholder="Give Me A Reason">
-        </div>
-
-        <div><label>Approving Person: </label>
-            <select formControlName="approvP">
-                <option [value]="">Select</option>
-                <option *ngFor="let a of apperson">{{a.name}}</option>
-            </select>
-        </div>
-
-        <div><label> Notify other Persons: </label>
-            <select formControlName="notifyMe">
-                <option [value]="">Select</option>
-                <option *ngFor="let n of notperson ">{{n.name}}</option>
-            </select>
-        </div>
-
-        <button type="submit">Add Leave</button>
-
-    </div>
-</form>

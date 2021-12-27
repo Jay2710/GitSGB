@@ -1,8 +1,27 @@
-form{
+.p-button:hover{
+    background:linear-gradient(90deg, hsla(205,46%,30%,1)0%,hsla(260,29%,36%,1)100%);
+    transition:0.5s;
+}
+
+.div .p-inputswitch-slider:hover{
+    background:linear-gradient(90deg, hsla(205,46%,30%,1)0%,hsla(260,29%,36%,1)100%);
+    transition:0.5s;
+}
+
+.p-inputswitch-checked:hover{
+    background:linear-gradient(90deg, hsla(205,46%,30%,1)0%,hsla(260,29%,36%,1)100%);
+    transition:0.5s;
+}
+
+.card-header{
+    background:linear-gradient(90deg, hsla(205,46%,30%,1)0%,hsla(260,29%,36%,1)100%);
+    color:white;
+}
+/* form{
     padding-left:500px;
     padding-bottom: 300px;
     width:50%
-}
+} */
 
 
 

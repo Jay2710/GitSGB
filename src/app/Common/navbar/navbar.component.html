@@ -1,0 +1,58 @@
+<div class="animated fadeIn">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-header">
+                    Leave Management
+                </div>
+                <div class="card-body">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <div class="navbar navbar-light">
+                            <button class="navbar-toggler sidebar-toggler" type="button" data-toggle="sidebar-show">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+                        <div class="navbar-brand">Navbar</div>
+                        <button aria-controls="navbarSupportedContent" (click)="isCollapsed = !isCollapsed"
+                            [attr.aria-expanded]="!isCollapsed" class="navbar-toggler" type="button"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="/dashboard">Dashboard <span
+                                            class="sr-only">(current)</span></a>
+                                </li>
+                                <!-- <li class="nav-item">
+                                    <a class="nav-link" href="#">Link</a>
+                                </li> -->
+                                <!-- <li class="nav-item dropdown" dropdown>
+                                    <a id="link-dropdown" class="nav-link dropdown-toggle" href dropdownToggle
+                                        (click)="false" aria-controls="your-dropdown">
+                                        Dropdown
+                                    </a>
+                                    <div id="your-dropdown" class="dropdown-menu" aria-labelledby="link-dropdown"
+                                        *dropdownMenu>
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </li> -->
+                                <!-- <li class="nav-item">
+                                    <a class="nav-link disabled" href="#">Disabled</a>
+                                </li> -->
+                            </ul>
+                            <form class="form-inline my-2 my-lg-0">
+                                <button pButton pRipple label="Logout" icon="pi pi-sign-out" class="p-button-sm"
+                                    iconPos="right" (click)="authenticationservice.logoutUser()"></button>
+                            </form>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

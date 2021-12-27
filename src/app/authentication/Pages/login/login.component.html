@@ -1,4 +1,79 @@
-<div class="container">
+<div class="app-body">
+    <main class="main d-flex align-items-center">
+        <p-toast position="top-right" [showTransformOptions]="'translateX(100%)'"></p-toast>
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <div class="card-group">
+                        <div class="card p-4">
+                            <div class="card-body">
+                                <form [formGroup]="LoginForm" (ngSubmit)="onSubmit()">
+
+                                    <h1>Login</h1>
+                                    <p class="text-muted">Sign In to your account</p>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="pi pi-user"></i></span>
+                                        </div>
+                                        <input type="email" class="form-control" placeholder="Enter Your Email Address"
+                                            formControlName="emailId"><br>
+                                        <div
+                                            *ngIf="(LoginForm.get('emailId')?.touched || isSubmitted) && LoginForm.get('emailId')?.invalid">
+                                            <span id="emailHelp" class="form-text"
+                                                *ngIf="LoginForm.get('emailId')?.hasError('required')">*Email is
+                                                Required field</span>
+                                            <span id="emailHelp" class="form-text"
+                                                *ngIf="LoginForm.get('emailId')?.hasError('pattern')">*Email is not
+                                                Correct</span>
+                                        </div>
+                                    </div>
+                                    <div class="input-group mb-4">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="pi pi-lock"></i></span>
+                                        </div>
+                                        <input type="password" class="form-control" pPassword
+                                            placeholder="Enter Your Password" formControlName="password" />
+                                        <span class="form-text"
+                                            *ngIf="(LoginForm.get('password')?.touched || isSubmitted) && LoginForm.get('password')?.invalid">
+                                            *Password is Required field</span>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <button pButton pRipple type="submit" label="Login" icon="pi pi-send"
+                                                class="p-button-sm" iconPos="right"></button>
+                                            <!-- <p-button pRipple type="submit" label="Login" icon="pi pi-send"
+                                                class="p-button-raised" iconPos="right" styleClass="p-button-sm">
+                                            </p-button> -->
+
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <button type="button" class="btn btn-link px-0"
+                                                routerLink='/forgot-password'>Forgot password?</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- <div class="card text-white bg-primary py-5 d-md-down-none"
+                            style="background:linear-gradient(90deg, hsla(205,46%,30%,1)0%,hsla(260,29%,36%,1)100%);">
+                            <div class="card-body text-center">
+                                <div>
+
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+
+
+<!-- ///Previously used code -->
+<!-- <div class="container">
     <p-toast position="top-right"></p-toast>
     <div class="row">
         <div class="col-md-6">
@@ -41,4 +116,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->

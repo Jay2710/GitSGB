@@ -12,8 +12,6 @@ import { of, throwError } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthenticationService {
-
-
   constructor(private http: HttpClient,
     private router: Router) { }
 
@@ -43,6 +41,7 @@ export class AuthenticationService {
     if (emailId == 'admin@gmail.com' && password == 'Admin@123') {
       this.setToken('token');
       return of({ name: 'Admin', emailId: 'admin@gmail.com' });
+
     }
     return throwError(new Error('F'));
   }

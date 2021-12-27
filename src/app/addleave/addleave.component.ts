@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { PrimeNGConfig } from 'primeng/api';
 
 
 
@@ -10,34 +11,34 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./addleave.component.css']
 })
 export class AddleaveComponent implements OnInit {
-
-
+  checked: boolean = false;
+  minDate = new Date();
   isSubmitted = false;
   LeaveForm: FormGroup = new FormGroup({});
   range: FormGroup = new FormGroup({});
-  leaveType = [{ 'id': 1, 'name': 'One Day' }, { 'id': 2, 'name': 'Multiple Days' }, { 'id': 3, 'name': 'Half Day' }];
-  apperson = [{ 'id': 11, 'name': 'Hardik Gondalia' }, { 'id': 12, 'name': 'Parth Bhuta' }];
-  notperson = [{ 'id': 13, 'name': 'Dhvani Shah' }, { 'id': 14, 'name': 'Bhagyesh Borale' }];
+  leaveT = [{ 'id': 1, 'name': 'One Day' }, { 'id': 2, 'name': 'Multiple Days' }];
+  apperson = [{ 'id': 11, 'name': 'Hardik Gondalia' }, { 'id': 12, 'name': 'A' }, { 'id': 13, 'name': 'B' }];
+  notperson = [{ 'id': 14, 'name': 'Parth Bhuta' }, { 'id': 15, 'name': 'Dhvani Shah' }, { 'id': 16, 'name': 'Bhagyesh Borale' }];
   type: number = 1;
 
 
 
 
-  constructor() {
 
-
+  constructor(private primengconfig: PrimeNGConfig) {
   }
 
   ngOnInit(): void {
-
+    this.primengconfig.ripple = true;
     this.LeaveForm = new FormGroup({
-      empId: new FormControl("", [Validators.required]),
-      leaveT: new FormControl("", [Validators.required]),
-      date: new FormControl(""),
+      leaveType: new FormControl("", [Validators.required]),
+      halfDay: new FormControl(""),
+      date: new FormControl("", [Validators.required]),
       reason: new FormControl(""),
       approvP: new FormControl(""),
       notifyMe: new FormControl("")
     });
+    // console.log(this.type);
   }
 
   onSubmit() {
@@ -45,10 +46,11 @@ export class AddleaveComponent implements OnInit {
     if (this.LeaveForm.valid) {
       console.log(this.LeaveForm);
     }
+    // this.LeaveForm.reset();
   }
 
-  onChange(data: number) {
-    this.type = data;
+  onChange(Value: any) {
+    this.type = Value;
   }
 
 

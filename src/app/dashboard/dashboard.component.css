@@ -1,6 +1,34 @@
 /* @import '../home/home.component.css'; */
+.p-button:hover{
+    background:linear-gradient(90deg, hsla(205,46%,30%,1)0%,hsla(260,29%,36%,1)100%);
+    transition:0.5s;
+}
 
-.table_container{
+.p-button{
+    width:200px;
+}
+
+.card-header{
+    background:linear-gradient(90deg, hsla(205,46%,30%,1)0%,hsla(260,29%,36%,1)100%);
+    color:white;
+}
+
+/* .btn:hover{
+    border: purple;
+    color: white;
+    background:linear-gradient(90deg, hsla(205,46%,30%,1)0%,hsla(260,29%,36%,1)100%,rgb(247, 11, 82)100%);
+    
+}
+
+.btn{
+    
+    
+    width:50%;
+    transition:0.5s;
+    transform: background;
+} */
+
+/* .table_container{
     border-collapse:collapse;
     position:flex;
     width: 70%;
@@ -37,4 +65,4 @@
     width: 50%;
     margin-left:280px;
     margin-bottom:100px;
-}
+} */

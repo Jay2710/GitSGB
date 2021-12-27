@@ -9,11 +9,14 @@ import { AccordionModule } from 'primeng/accordion';
 import { ButtonModule } from 'primeng/button';
 import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
+import { DropdownModule } from 'primeng/dropdown';
+import { RadioButtonModule } from 'primeng/radiobutton';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './authentication/Pages/login/login.component';
 import { NotFoundComponent } from './authentication/Pages/not-found/not-found.component';
-import { ForgotPasswordComponent } from './authentication/Pages/forgot-password/forgot-password.component'
+import { ForgotPasswordComponent } from './authentication/Pages/forgot-password/forgot-password.component';
+
 
 
 
@@ -25,7 +28,8 @@ import { ForgotPasswordComponent } from './authentication/Pages/forgot-password/
     AppComponent,
     LoginComponent,
     NotFoundComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -37,7 +41,9 @@ import { ForgotPasswordComponent } from './authentication/Pages/forgot-password/
     AppRoutingModule,
     AccordionModule,
     ButtonModule,
-    ToastModule
+    ToastModule,
+    DropdownModule,
+    RadioButtonModule
 
   ],
   providers: [MessageService],
