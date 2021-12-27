@@ -1,7 +1,4 @@
-.sidebar-show{
-    display:50%;
-    background:black;
-}
+
 
 
 
@@ -20,77 +17,16 @@
     transform: background;
 } 
 
-body{
+.sidebar-show{
     margin:0;
     padding:0;
     font-family:'Roboto', sans-serif;
 }
 
-header{
-    position:fixed;
-    background:linear-gradient(rgb(97, 95, 95),rgb(71, 20, 119));
-    padding:100px;
-    width:100%;
-    height:75px;
-}
-
-.left_area {
-    color: #fff;
-    margin: 10px;
-    margin-top:-55px;
-    margin-left: -10px;
-    text-transform: uppercase;
-    font-size:30px;
-    font-weight:900;
-}
-
-.right_area .profile_img{
-    width:100px;
-    height: 100px;
-    border-radius: 100px;
-    margin-bottom: 10px;
-}
-
-.leave h2{
-    position:sticky;
-    margin-top:20px;
-    margin-left:700px;
-}
-
-.profile_name{
-
-    color:azure;
-    float:right;
-    margin-top:10px;
-    margin-right:-50px;
-    text-decoration: none;
-}
-
-.logout_btn{
-    padding:5px;
-    background:rgb(253, 253, 253);
-    text-decoration: none;
-    float:right;
-    margin-top: 40px;
-    margin-right: 25px;
-    border-radius: 2px;
-    font-size:15px;
-    font-weight: 600;
-    color:rgb(8, 8, 8);
-}
-
-.logout_btn:hover{
-    background:linear-gradient(90deg, hsla(205,46%,30%,1)0%,hsla(260,29%,36%,1)100%);
-}
-.logout_btn span:hover{
-    color:white;
-    transition:0.5s;
-}
-
 .sidebar{
     background:rgb(0, 0, 0);
     padding-top: 30px;
-    position: fixed;
+    position: absolute;
     left: 0;
     width: 250px;
     height:100%;
@@ -100,8 +36,6 @@ header{
 
 .sidebar a{
     color:#fff;
-    cursor:pointer;
-    display:block;
     width:100%;
     line-height: 80px;
     text-decoration:none;
@@ -137,11 +71,6 @@ header{
     padding-right: 20px;
 }
 
-label #sidebar_btn:hover{
-    color:hsla(260,29%,36%,1);
-    
-}
-
 #check:checked~.sidebar{
     left:-180px;
 }
@@ -164,16 +93,9 @@ label #sidebar_btn:hover{
     font-size:20px;
     margin-left: 160px;
     width:90px;
-} */
-
-
-
-#check:checked ~.leave h2{
-    width:calc(100% -80%);
-    margin-left: 100px;
-}
+} 
 
 #check{
     display:none;
-}
+} */
 
